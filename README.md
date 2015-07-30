@@ -28,7 +28,7 @@ All Pages blogs are open source, so anyone can view the repository side of the s
 
 Of course, nobody can alter the site except the owner, who can choose to approve these pull requests or not.
 
-As an example, McCullough shows off the GitHub Teaching site. From the Pages side, it’s spartan, but familiar.
+As an example, [McCullough](http://matthewjmccullough.com/) shows off the GitHub Teaching site. From the Pages side, it’s spartan, but familiar.
 
 But from the back side, it’s a repository where students can learn by making edits to the very site that’s helping them learn.
 
