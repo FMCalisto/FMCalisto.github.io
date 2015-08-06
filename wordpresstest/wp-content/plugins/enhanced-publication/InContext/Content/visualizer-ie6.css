@@ -1,0 +1,124 @@
+html body div.visualizer_canvas div#visualizer_innercanvas 
+{
+  zoom: 1;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.visualizer_statecanvas
+{
+  zoom: 1;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud_row
+{
+  zoom: 1;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject
+{
+  zoom: 1;
+  left: 10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud
+{
+  overflow: hidden;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud fieldset
+{
+  zoom: 1;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud ul.objects
+{
+  zoom: 1;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud.columns2 ul.objects
+{
+  width: 49%;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud.columns3 ul.objects
+{
+  width: 32%;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object
+{
+  zoom: 1;
+  filter:progid:DXImageTransform.Microsoft.Shadow(enabled='false');
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.gradient
+{
+	filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=false,GradientType=0, StartColorStr='#FFFFFF', EndColorStr='#EAE8E3');
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object a.annotation_indication {
+	behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup {
+	left: 10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup a.close_popup 
+{
+  behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup div.direction_hover_popup {
+	behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a,
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span 
+{
+  behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span
+{
+  behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs
+{
+  behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon
+{
+	behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span
+{
+	behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 {
+	behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 div
+{
+  left: 0px!important;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.value a
+{
+  behavior: url(Content/iepngfix.htc);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 span.text {
+	border:1px solid #F0EFEB;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2.hover span.text {
+	border-bottom:1px solid #a9a9a7;
+	border-top:1px solid #F0EFEB;
+	border-left:1px solid #F0EFEB;
+	border-right:1px solid #F0EFEB;
+}

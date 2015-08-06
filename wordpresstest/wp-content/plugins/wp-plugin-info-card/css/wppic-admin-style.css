@@ -1,0 +1,233 @@
+/**
+ * Plugin Name: WP Plugin Info Card by b*web
+ * Plugin URI: http://b-website.com/
+ * Author: Brice CAPOBIANCO - b*web
+ */		
+@import url("./wppic-style.min.css");
+i.mce-i-wppic-icon {
+	background-image:  url('../img/wppic.png');
+	background-image:  none, url('../img/wppic.svg'), url('../img/wppic.png');
+}
+.mce-wppic-media {
+	padding-right: 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 32px;
+}
+.mce-wppic-media-button {
+	cursor: pointer;
+	width: 28px;
+	height: 28px;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	float: right;
+	background-color: #F7F7F7;
+	border: 1px solid #DDD;
+	font-size: 30px;
+	color: #777;
+	position: relative;
+	line-height: 28px;
+	text-align: center;
+}
+#wppic-admin-page .wp-pic.card {
+  margin-top: 0;
+  padding:0;
+  min-width: auto;
+  max-width: auto;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transperant;
+}
+#wppic-admin-page .wppic-cache-clear-loader{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	background-size: 100%;
+	position: absolute;
+	margin: 4px 0 0 5px;
+}
+#wppic-admin-page #post-body-content .postbox .inside{
+	line-height: 1em;
+}
+#wppic-admin-page .documentation a {
+	font-weight: bold;
+	color: #db3939;
+	font-size: 14px;
+	text-decoration: none;
+}
+#wppic-admin-page pre {
+	display: block;
+	background: #EAEAEA;
+	margin: 0 0 10px;
+	padding: 5px;
+	overflow-x: auto;
+}
+h3.wp-pic-title {
+	margin-top:20px;
+}
+#wppic-shortcode:after {
+	content:'';
+	display:block;
+	clear:both;
+	padding-bottom:15px;
+}
+#wppic-shortcode h3.hndle,
+#wppic-form h3.hndle {
+	margin: 0;
+	padding: 8px 0 8px 12px;
+	cursor:default;
+}
+#wppic-form label {
+	padding-left: 15px;
+}
+#wppic-form div.form-list:not(:first-child) {
+	margin-top: 40px;
+}
+#wppic-form .wppic-list li.wppic-dd {
+    list-style-type: none;
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+}
+#wppic-form .wppic-list li.wppic-dd input[type=text] {
+	padding-left: 40px;
+	padding-right: 40px;
+	width: 100%;
+}
+#wppic-form .wppic-list li.wppic-dd .wppic-remove-field {
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+    cursor: pointer;
+	margin-left: 5px;
+	position: absolute;
+	right: 0;
+	top: 2px;
+}
+#wppic-about-list {
+	display: inline-block;
+	margin-right: 35px;
+	line-height: 30px;
+	vertical-align: top;
+}
+.wppic-button {
+	display: inline-block;
+	position: relative;
+	padding: 2px 0 2px 22px;
+	text-decoration: none;
+	margin-right: 15px;
+}
+.wppic-button:before,
+.wppic-list li.wppic-dd:before,
+.wppic-list li.wppic-dd .wppic-remove-field:after {
+	font-family: "dashicons";
+	position: absolute;
+	display: inline-block;
+	left: 0px;
+	font-size: 1.5em;
+}
+.wppic-button.wppic-pluginHome:before {
+    content: "\f103";
+}
+.wppic-button.wppic-pluginOther:before {
+    content: "\f106";
+}
+.wppic-button.wppic-pluginPage:before {
+    content: "\f120";
+}
+.wppic-button.wppic-pluginSupport:before {
+    content: "\f223";
+}
+.wppic-button.wppic-pluginRate:before {
+    content: "\f155";
+}
+.wppic-button.wppic-pluginContact:before {
+    content: "\f130";
+}
+.wppic-button.wppic-pluginDonate:before {
+    content: "\f328";
+}
+.wppic-list li.wppic-dd:before {
+    cursor: move;
+	top: 0px;
+	left: 5px;
+	height: 24px;
+	width: 24px;
+    content: "\f156";
+}
+.wppic-list li.wppic-dd .wppic-remove-field:after {
+	left: auto;
+	width: 24px;
+	height: 24px;
+    content: "\f335";
+}
+
+/*Dashboard Widget*/
+#dashboard-widgets #wppic-dashboard-widget h4 {
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 1px 0;
+	border-color: #eee;
+	display: inline-block;
+	width: 100%;
+	margin: -1px 0 0;
+	padding: 10px;
+}
+#dashboard-widgets #wppic-dashboard-widget img.wppic-logo{
+	display: inline-block !important;
+	margin-bottom: -3px;
+	height: 18px;
+}
+#dashboard-widgets #wppic-dashboard-widget.postbox .inside {
+	margin: 0;
+	padding: 0;
+}
+#wppic-dashboard-widget div.wp-pic-loading {
+	background-color: #fafafa;
+	background-position: center center;
+	background-size: 20px 20px;
+	background-repeat:no-repeat;
+	min-height: 30px;
+	width: 100%;
+}
+#wppic-dashboard-widget div.wp-pic-item{
+	margin: -1px 0 0;
+	padding: 11px;
+	border-top: 1px solid #eee;
+	background: #fafafa;
+}
+#wppic-dashboard-widget .wp-pic-no-item {
+	border: none;
+}
+#wppic-dashboard-widget .wp-pic-list.ajax-call div.wp-pic-item {
+	display: none;
+}
+#wppic-dashboard-widget .wp-pic-widget-name {
+	display: block;
+}
+#wppic-dashboard-widget .wp-pic-widget-rating,
+#wppic-dashboard-widget .wp-pic-widget-downloaded,
+#wppic-dashboard-widget .wp-pic-widget-updated,
+#wppic-dashboard-widget .wp-pic-no-item {
+	display: inline-block;
+	padding-right: 15px;
+	color: #777;
+	font-weight: bold;
+}
+#wppic-dashboard-widget .wp-pic-widget-rating span,
+#wppic-dashboard-widget .wp-pic-widget-downloaded span,
+#wppic-dashboard-widget .wp-pic-widget-updated{
+	font-weight: normal;
+}
+#wppic-dashboard-widget .wp-pic-widget-updated,
+#wppic-dashboard-widget .wp-pic-no-item {
+	margin: 0;
+	font-style: italic;
+}
+#wppic-dashboard-widget .wp-pic-widget-updated {
+	display: block;
+}

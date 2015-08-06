@@ -1,0 +1,376 @@
+/* import skin */
+@import url(visualizer-skin.css); 
+
+/* general reset */
+html body div.visualizer_canvas div#visualizer_innercanvas div, html body div.visualizer_canvas div#visualizer_innercanvas span, html body div.visualizer_canvas div#visualizer_innercanvas applet, 
+html body div.visualizer_canvas div#visualizer_innercanvas object, html body div.visualizer_canvas div#visualizer_innercanvas iframe, html body div.visualizer_canvas div#visualizer_innercanvas h1, 
+html body div.visualizer_canvas div#visualizer_innercanvas h2, html body div.visualizer_canvas div#visualizer_innercanvas h3, html body div.visualizer_canvas div#visualizer_innercanvas h4, html body div.visualizer_canvas div#visualizer_innercanvas h5, 
+html body div.visualizer_canvas div#visualizer_innercanvas h6, html body div.visualizer_canvas div#visualizer_innercanvas p, html body div.visualizer_canvas div#visualizer_innercanvas blockquote, 
+html body div.visualizer_canvas div#visualizer_innercanvas pre, html body div.visualizer_canvas div#visualizer_innercanvas a, html body div.visualizer_canvas div#visualizer_innercanvas abbr, 
+html body div.visualizer_canvas div#visualizer_innercanvas acronym, html body div.visualizer_canvas div#visualizer_innercanvas address, html body div.visualizer_canvas div#visualizer_innercanvas big, 
+html body div.visualizer_canvas div#visualizer_innercanvas cite, html body div.visualizer_canvas div#visualizer_innercanvas code,html body div.visualizer_canvas div#visualizer_innercanvas del, 
+html body div.visualizer_canvas div#visualizer_innercanvas dfn, html body div.visualizer_canvas div#visualizer_innercanvas em, html body div.visualizer_canvas div#visualizer_innercanvas font, 
+html body div.visualizer_canvas div#visualizer_innercanvas img, html body div.visualizer_canvas div#visualizer_innercanvas ins, html body div.visualizer_canvas div#visualizer_innercanvas kbd, 
+html body div.visualizer_canvas div#visualizer_innercanvas q, html body div.visualizer_canvas div#visualizer_innercanvas s, html body div.visualizer_canvas div#visualizer_innercanvas samp,
+html body div.visualizer_canvas div#visualizer_innercanvas small, html body div.visualizer_canvas div#visualizer_innercanvas strike, html body div.visualizer_canvas div#visualizer_innercanvas strong, 
+html body div.visualizer_canvas div#visualizer_innercanvas sub, html body div.visualizer_canvas div#visualizer_innercanvas sup, html body div.visualizer_canvas div#visualizer_innercanvas tt, 
+html body div.visualizer_canvas div#visualizer_innercanvas var, html body div.visualizer_canvas div#visualizer_innercanvas b, html body div.visualizer_canvas div#visualizer_innercanvas u, 
+html body div.visualizer_canvas div#visualizer_innercanvas i, html body div.visualizer_canvas div#visualizer_innercanvas center, html body div.visualizer_canvas div#visualizer_innercanvas dl, 
+html body div.visualizer_canvas div#visualizer_innercanvas dt, html body div.visualizer_canvas div#visualizer_innercanvas dd, html body div.visualizer_canvas div#visualizer_innercanvas ol, 
+html body div.visualizer_canvas div#visualizer_innercanvas ul, html body div.visualizer_canvas div#visualizer_innercanvas li, html body div.visualizer_canvas div#visualizer_innercanvas fieldset, 
+html body div.visualizer_canvas div#visualizer_innercanvas form, html body div.visualizer_canvas div#visualizer_innercanvas label, html body div.visualizer_canvas div#visualizer_innercanvas legend,
+html body div.visualizer_canvas div#visualizer_innercanvas table, html body div.visualizer_canvas div#visualizer_innercanvas caption, html body div.visualizer_canvas div#visualizer_innercanvas tbody, 
+html body div.visualizer_canvas div#visualizer_innercanvas tfoot, html body div.visualizer_canvas div#visualizer_innercanvas thead, html body div.visualizer_canvas div#visualizer_innercanvas tr, 
+html body div.visualizer_canvas div#visualizer_innercanvas th, html body div.visualizer_canvas div#visualizer_innercanvas td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas ol, html body div.visualizer_canvas div#visualizer_innercanvas ul {
+	list-style: none;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas blockquote, html body div.visualizer_canvas div#visualizer_innercanvas q {
+	quotes: none;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas blockquote:before, html body div.visualizer_canvas div#visualizer_innercanvas blockquote:after,
+html body div.visualizer_canvas div#visualizer_innercanvas q:before, html body div.visualizer_canvas div#visualizer_innercanvas q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+html body div.visualizer_canvas div#visualizer_innercanvas :focus {
+	outline: 0;
+}
+/* remember to highlight inserts somehow! */
+html body div.visualizer_canvas div#visualizer_innercanvas ins {
+	text-decoration: none;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+html body div.visualizer_canvas div#visualizer_innercanvas table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* visualizer styles */
+html body div.visualizer_canvas div#visualizer_innercanvas
+{
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.visualizer_statecanvas
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 10px 10px 10px 10px;
+  overflow: visible;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar
+{
+  text-align: center;
+	margin: 0 160px 40px 160px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 {
+	display:inline;
+	padding:0 23px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2.hover span.text {
+
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 span.icon {
+	
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs
+{
+  position:absolute;
+	top:10px;
+	left:10px;
+	padding:0 0 0 9px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li {
+	float:left;
+	margin:0 0 0 5px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a,
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span {
+	display:block;
+	width:23px;
+	height:23px;
+	text-indent:-9999em;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject
+{
+  position:relative;
+	float: left;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.padding
+{
+  padding: 6px 8px 12px 8px;
+	margin:10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.title
+{
+  margin-bottom:10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon
+{
+ 	width:36px;
+	height:36px;
+	position:absolute;
+	z-index:2;
+	top:0;
+	left:10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span
+{
+ 	display:block;
+	width:36px;
+	height:36px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type
+{
+  margin:0 0 10px 40px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.image
+{
+
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas img.centerobjectimage
+{
+  width:65px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property
+{
+  margin-bottom:10px;
+  word-wrap: break-word;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.label, html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.value
+{  
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud_row
+{
+  overflow: hidden;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud
+{
+  float: left;
+  min-height: 10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud fieldset
+{
+  width: auto;
+	margin: 1px 10px 10px 10px;
+	float: left;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud fieldset legend
+{
+  margin-left: 10px;
+  padding: 0px 3px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud ul.objects
+{
+  width: auto;
+	float: left;
+	padding:0;
+	margin-bottom:-10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud.columns2 ul.objects
+{
+  width: 50%;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud.columns3 ul.objects
+{
+  width: 33%;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object
+{
+  position:relative;
+	margin: 10px 10px 20px 10px;
+  width: auto;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.padding
+{
+  padding: 5px 10px 10px 10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon
+{
+ 	width:36px;
+	height:36px;
+	position:absolute;
+	z-index:2;
+	top:-8px;
+	left:-1px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span
+{
+ 	display:block;
+	width:36px;
+	height:36px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type
+{
+	position:relative;	
+	z-index:2;
+	margin:0 0 5px 30px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.title
+{
+  position:relative;	
+	z-index:2;
+	border: none;
+	overflow: hidden;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object a
+{
+  position:relative;	
+	z-index:2;
+	text-decoration: none;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup {
+	position:absolute;
+	top:0;
+	left:-9999px;
+	z-index:99;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup div.direction_hover_popup {
+	position:absolute;
+	z-index:8;
+	top:2px;
+	left:0;
+	width:15px;
+	height:8px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup.top div.direction_hover_popup {
+	top:auto;
+	bottom:2px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.bg_hover_popup {
+	position:absolute;
+	z-index:2;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup {
+	padding:5px 10px;
+	margin:10px;
+	position:relative;
+	top:0;
+	left:0;
+	z-index:4;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup .indicator-text {
+	white-space: nowrap;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup .close_popup {
+	position:absolute;
+	right:15px;
+	top:15px;
+	z-index:16;	
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup .annotations_title {
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup .annotations_list {
+	padding:5px 0;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup .annotations_list li {
+	padding: 2px 0 5px;
+	margin-bottom:5px;
+	border-bottom:1px solid #ccd4e9;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup .annotations_list li.last {
+	border-bottom:none;	
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object a.annotation_indication {
+	display:block;
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:22px;
+	height:18px;
+	text-indent:-9999em;
+	white-space: nowrap;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlay
+{
+  position: absolute;
+	z-index:88;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlayBox
+{
+  z-Index : 99;
+  position : absolute;
+  width : 50%;
+  padding : 5px;
+  top: 40%;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlayBox div.annotationsTitle
+{
+ 	margin-bottom:10px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlayBox a.closeAnnotation
+{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
+}

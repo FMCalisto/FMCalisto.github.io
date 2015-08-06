@@ -1,0 +1,609 @@
+/* visualizer styles for skinning */
+
+/* #visualizer_innercanvas */
+html body div.visualizer_canvas div#visualizer_innercanvas
+{
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Sans-Serif;
+  font-size: 11px;
+  line-height: 15px;
+  background-color: #f0efeb;
+  overflow: hidden;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.visualizer_statecanvas
+{  
+}
+
+/* .breadcrumbs */
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs
+{
+  background:transparent url(Images/bg-breadcrumbs.png) 0 50% no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a,
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span {
+	background:transparent url(Images/type-icons.png) -200px -100px no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span {
+	background-position:-250px -100px;
+} 
+
+/* .titlebar */
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2
+{  
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Sans-Serif;
+  font-weight: normal;
+  font-size: 17px;
+	line-height:20px;
+  color: #414141;
+	cursor:pointer;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 span.text {
+	border-bottom:1px solid #f0efeb;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2.hover span.text {
+	border-bottom:1px solid #a9a9a7;
+	border-top:1px solid #F0EFEB;
+	border-left:1px solid #F0EFEB;
+	border-right:1px solid #F0EFEB;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2 {
+	background:transparent url(Images/hdr-aggregation-icon.png) 0 2px no-repeat;	
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar h2.hover {
+	background-position: 0 -198px;
+}
+/* .centerobject */
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.padding
+{
+  background-color: #6e84c0;
+  
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	-webkit-border-top-left-radius: 15px 15px;
+  -moz-border-radius-topleft: 15px 15px;
+	border-top-left-radius: 15px 15px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.title
+{
+  color: #fff;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span
+{
+	background:transparent url(Images/type-icons.png) -50px -100px no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type
+{
+  color: #0f2356;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.label
+{
+  color: #0f2356;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.value
+{
+  color: #fff;  
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject a.objectLink
+{
+	position: relative;
+	z-index: 0;
+	height:20px;
+	line-height: 20px;
+	padding: 2px;
+	width:80px;
+	text-align:center;
+	
+	display:block;
+	
+	-webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	 color: #fff;  
+  text-decoration: none;
+	
+	filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=true, GradientType=0, StartColorStr='#8093C9', EndColorStr='#6174AA');
+	background: -moz-linear-gradient(top, #8093C9 0%, #8093C9 10%, #6174AA 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8093C9), color-stop(10%,#8093C9), color-stop(100%,#6174AA)); /* webkit */  
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject a.objectLink:hover
+{
+		filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=false, GradientType=0, StartColorStr='#8093C9', EndColorStr='#6174AA');
+    background: #8093C9;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject a.objectLink:hover span.externalLink {
+	background-position:100% -200px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.value a
+{
+  color: #fff;  
+  text-decoration: none;
+
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.property div.value a:hover
+{
+  color: #fff;  
+  text-decoration: none;
+  border-bottom:1px solid #fff;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject a span.externalLink
+{
+  padding-right:17px;
+	background:transparent url(Images/external-link-icon.png) 100% 0 no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject a:hover span.externalLink {
+	background-position:100% -200px;
+}
+
+
+/* .cloud */
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud fieldset
+{
+  border: 1px solid #b2bad0;
+  
+	-webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.cloud fieldset legend
+{
+  color: #47598c;
+	font-size:11px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object
+{
+  cursor: pointer;
+  border: 1px solid #d4ddfa;
+	
+	-webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+	
+	-moz-box-shadow: 3px 3px 7px #aaa;
+  -webkit-box-shadow: 3px 3px 7px #aaa;
+  box-shadow: 3px 3px 7px #aaa;
+ 
+  filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666',direction='135',strength='6');
+  
+  background-color: #FFFFFF; /* old browsers & animation */
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover
+{
+	-moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  
+  filter:progid:DXImageTransform.Microsoft.Shadow(color='#ffffff',direction='135',strength='7');
+  
+  background-color: #FFFFFF; /* old browsers & animation */
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.gradient
+{
+	position: relative;
+	z-index: 0;
+	height: 27px;
+	width: auto;	
+	margin: -20px -10px -10px -10px;
+	border: 1px solid #fff;
+	
+	filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=true, GradientType=0, StartColorStr='#FFFFFF', EndColorStr='#EAE8E3');
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 10%, #EAE8E3 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(10%,#FFFFFF), color-stop(100%,#EAE8E3)); /* webkit */  
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.gradient
+{
+	filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=false,GradientType=0, StartColorStr='#FFFFFF', EndColorStr='#EAE8E3');
+	background: #fff;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon
+{
+	background:transparent url(Images/bg-objecttype-cloud.png) 0 0 no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span
+{
+	background: transparent url(Images/type-icons.png) -100px -100px no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type
+{
+  color: #6e84c0;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object a
+{
+  color: #000;
+  font-weight: normal;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object a.annotation_indication {
+	background:transparent url(Images/utility-icons.png) -50px -300px no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup a.close_popup 
+{
+  text-indent: -9999em;
+  height: 22px;
+  width: 22px;
+  background:transparent url(Images/utility-icons.png) -50px -150px no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup div.direction_hover_popup {
+	background:transparent url(Images/hover-popup-direction.png) 0 0 no-repeat;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup.top div.direction_hover_popup {
+	background-position: 0 -8px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.hover_popup.bottom div.direction_hover_popup {
+	background-position: 0 0;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.breadcrumb_popup div.type {
+  color: #6e84c0;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.bg_hover_popup {
+	background-color:#102356;
+	opacity: .2; /* Standard: FF gt 1.5, Opera, Safari */
+	filter: alpha(opacity=20); /* IE lt 8 */
+	-ms-filter: "alpha(opacity=20)"; /* IE 8 */
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.content_hover_popup {
+	background-color:#fff;
+	-moz-box-shadow: 3px 3px 7px #aaa;
+  -webkit-box-shadow: 3px 3px 7px #aaa;
+  box-shadow: 3px 3px 7px #aaa;
+}
+
+/* .overlay */
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlay
+{
+  background-color: black;
+  opacity: .6;
+  filter : progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlayBox
+{
+  background-color : white;
+  border : 2px solid silver;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.overlayBox div.annotationsTitle
+{
+ font-weight: bold;
+}
+
+/* ICONS - breadcrumbs */
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.aggregation
+{ 
+	background-position:-200px -50px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.aggregation 
+{ 
+	background-position:-250px -50px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.concept
+{ 
+	background-position:-200px -650px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.concept
+{ 
+	background-position:-250px -650px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.document
+{ 
+	background-position:-200px -150px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.document
+{ 
+	background-position:-250px -150px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.image
+{ 
+	background-position:-200px -200px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.image 
+{ 
+	background-position:-250px -200px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.publication
+{ 
+	background-position:-200px -250px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.publication 
+{ 
+	background-position:-250px -250px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.video
+{ 
+	background-position:-200px -300px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.video 
+{ 
+	background-position:-250px -300px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.event
+{ 
+	background-position:-200px -350px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.event
+{ 
+	background-position:-250px -350px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.group
+{ 
+	background-position:-200px -400px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.group 
+{ 
+	background-position:-250px -400px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.organization
+{ 
+	background-position:-200px -450px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.organization 
+{ 
+	background-position:-250px -450px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.person
+{ 
+	background-position:-200px -500px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.person 
+{ 
+	background-position:-250px -500px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.project
+{ 
+	background-position:-200px -550px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.project 
+{ 
+	background-position:-250px -550px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li a.topic
+{ 
+	background-position:-200px -600px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas div.titlebar div.breadcrumbs li span.topic
+{ 
+	background-position:-250px -600px;
+}
+
+/* ICONS - cloud */
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.aggregation
+{ 
+	background-position:-100px -50px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.aggregation,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.aggregation,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.aggregation
+{ 
+	background-position:-150px -50px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.concept
+{ 
+	background-position:-100px -650px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.concept,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.concept,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.concept
+
+{ 
+	background-position:-150px -650px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.document
+{ 
+	background-position:-100px -150px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.document,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.document,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.document
+{ 
+	background-position:-150px -150px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.image
+{ 
+	background-position:-100px -200px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.image,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.image,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.image
+
+{ 
+	background-position:-150px -200px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.publication
+{ 
+	background-position:-100px -250px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.publication,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.publication,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.publication
+
+{ 
+	background-position:-150px -250px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.video
+{ 
+	background-position:-100px -300px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.video,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.video,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.video
+{ 
+	background-position:-150px -300px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.event
+{ 
+	background-position:-100px -350px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.event,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.event
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.event
+{ 
+	background-position:-150px -350px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.group
+{ 
+	background-position:-100px -400px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.group,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.group,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.group 
+{ 
+	background-position:-150px -400px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.organization
+{ 
+	background-position:-100px -450px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.organization,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.organization,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.organization
+{ 
+	background-position:-150px -450px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.person
+{ 
+	background-position:-100px -500px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.person,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.person,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.person 
+{ 
+	background-position:-150px -500px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.project
+{ 
+	background-position:-100px -550px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.project,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.project,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.project
+{ 
+	background-position:-150px -550px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas .object div.type_icon span.topic
+{ 
+	background-position:-100px -600px;
+}
+html body div.visualizer_canvas div#visualizer_innercanvas .object.previous div.type_icon span.topic,
+html body div.visualizer_canvas div#visualizer_innercanvas .object:hover div.type_icon span.topic,
+html body div.visualizer_canvas div#visualizer_innercanvas .object.hover div.type_icon span.topic
+{ 
+	background-position:-150px -600px;
+}
+
+/* ICONS - centerobject */
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.aggregation
+{ 
+	background-position:-50px -50px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.concept
+{ 
+	background-position:-50px -650px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.document
+{ 
+	background-position:-50px -150px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.image
+{ 
+	background-position:-50px -200px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.publication 
+{ 
+	background-position:-50px -250px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.video 
+{ 
+	background-position:-50px -300px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.event
+{ 
+	background-position:-50px -350px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.group 
+{ 
+	background-position:-50px -400px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.organization 
+{ 
+	background-position:-50px -450px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.person 
+{ 
+	background-position:-50px -500px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.project 
+{ 
+	background-position:-50px -550px;
+}
+
+html body div.visualizer_canvas div#visualizer_innercanvas div.centerobject div.type_icon span.topic
+{ 
+	background-position:-50px -600px;
+}

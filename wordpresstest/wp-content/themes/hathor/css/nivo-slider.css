@@ -1,0 +1,175 @@
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+
+
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+	max-height:500px ;
+	
+}
+  
+ 
+
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+
+
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+
+@media only screen and (max-width:480px) {
+	
+	.nivo-caption {
+	position:absolute;
+	padding: 5px 20px 5px 20px;
+	color:#fff;
+	max-width:100% !important;
+	z-index:8;
+	right:1%;
+	
+}
+
+.nivo-caption h3 {
+	color: rgb(255,255,255) !important;
+	text-transform: uppercase;
+	font-size: 14px !important;
+	background: #26ae90;
+	opacity: 0.70;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 7px !important;
+	margin-left: 0px !important;
+	padding-top: 5px !important;
+	padding-right: 10px !important;
+	padding-bottom: 5px !important;
+	padding-left: 10px !important;
+}
+
+.nivo-caption p {
+	margin: 0px;
+	color: rgb(0,0,0) !important;
+	font-size: 10px !important;
+	padding-top: 7px;
+	padding-right: 23px;
+	padding-bottom: 7px;
+	padding-left: 23px;
+	opacity: 0.50;
+	background-color: rgb(255,255,255);
+    }
+	
+}
+.nivo-caption {
+	position:absolute;
+	padding: 5px 20px 5px 20px;
+	color:#fff;
+	max-width:50%;
+	z-index:8;
+	right:1%;
+	
+	
+}
+.nivo-caption h3 {
+    padding: 10px 20px;
+    color: rgb(255,255,255) !important;
+    margin: 0px 0px 7px 23px;
+    text-transform: uppercase;
+    font-size: 24px;
+    background: #26ae90	;
+    opacity: 0.70;}
+
+
+.nivo-caption p {
+	margin: 0px;
+	color: rgb(0,0,0) !important;
+	font: 16px;
+	padding-top: 7px;
+	padding-right: 23px;
+	padding-bottom: 7px;
+	padding-left: 23px;
+	opacity: 0.50;
+	background-color: rgb(255,255,255);
+    }
+.nivo-caption a {
+	display:inline !important;
+}
+
+
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 5px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}

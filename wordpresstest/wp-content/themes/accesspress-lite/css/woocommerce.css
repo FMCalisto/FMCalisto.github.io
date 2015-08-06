@@ -1,0 +1,33 @@
+/*This styles is for the woo commerce*/
+
+.woocommerce .woocommerce-message:before, 
+.woocommerce .woocommerce-error:before, 
+.woocommerce .woocommerce-info:before, 
+.woocommerce-page .woocommerce-message:before, 
+.woocommerce-page .woocommerce-error:before, 
+.woocommerce-page .woocommerce-info:before
+{
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+}
+table {
+    border-collapse: collapse !important;
+}
+.woocommerce .cart-collaterals .cart_totals table td, 
+.woocommerce-page .cart-collaterals .cart_totals table td{
+	padding: 10px;
+}
+.woocommerce .cart-collaterals .cart_totals tr td, 
+.woocommerce .cart-collaterals .cart_totals tr th, 
+.woocommerce-page .cart-collaterals .cart_totals tr td, 
+.woocommerce-page .cart-collaterals .cart_totals tr th{
+	 border: 1px solid #ccc !important;
+	 padding: 10px
+}
+.woocommerce #content div.product div.thumbnails a, 
+.woocommerce div.product div.thumbnails a, 
+.woocommerce-page #content div.product div.thumbnails a, 
+.woocommerce-page div.product div.thumbnails a{
+	margin-bottom: 10px;
+}
