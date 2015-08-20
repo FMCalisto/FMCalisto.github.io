@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+
+
+</head>
+
+
+<div id="body">
+
+    <!--  <p id="val"></p>-->
+    <div ng-controller="MainCtrl">
+        <label>Num questões:</label>
+        <input Id="NumQuest" class="span3" style="margin: 0pt auto;" type="text" placeholder="Num questões..." data-provide="typeahead" data-items="1"
+                />
+        <p><button ng-click="DrawMatrix(NumQuest)">Draw</button></p>
+        <p><button ng-click="DelMatrix(NumQuest)">Cl</button></p>
+        <p><button ng-click="SendToServer()">Send</button></p>
+
+
+        <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
+
+            <rect ng-repeat="rect in rectangles"
+
+                  ng-attr-x="{{rect.x}}"
+
+                  ng-attr-y="{{rect.y}}"
+
+                  ng-attr-width="{{rect.width}}"
+
+                  ng-attr-height="{{rect.height}}"
+
+                  ng-attr-style="{{rect.style}}">
+
+                <!--   ng-attr-info="{{rect.info}}" -->
+
+
+            </rect>
+
+        </svg>
+
+
+    </div>
+</div>
+<!-- <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
+
+
+</svg> -->
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src = "/db/db_model.js"></script>
+<script src = "app.js"></script>
+
+</body>
+</html>
