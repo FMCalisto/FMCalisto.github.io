@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333;
+  padding: 0px;
+  margin: 0px;
+  border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::selection {
+  color: inherit;
+}
+::-moz-selection {
+  color: inherit;
+}
+html,
+body {
+  background-color: #353538;
+  color: #333;
+  font-family: Lato;
+  -webkit-font-smoothing: antialiased;
+}
+[contenteditable="true"]:focus {
+  outline: 1px solid black;
+}
+h1 {
+  text-align: left;
+  color: #00aeed;
+}
+h2 {
+  text-align: right;
+  color: #00aeed;
+  line-height: 1;
+  padding: 0;
+}
+h3 {
+  line-height: 1.5;
+  padding: 0;
+  color: #00aeed;
+}
+h4 {
+  line-height: 1;
+  padding: 0;
+  text-align: left;
+  color: #00aeed;
+}
+a {
+  color: #0089ba;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #006387;
+  text-shadow: 0px 0px 12px #00aeed;
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>INESC-ID | IDSS</title>
+
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link href="css/basic.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/questions.css" rel="stylesheet">
+    <link href="css/drag-drop.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Home</a>
+          
+        </div><!-- /.container -->
+    </div><!-- /.navbar -->
+  
+    <!-- HEADER 
+    =================================-->
+
+    <div class="jumbotron text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col col-lg-12 col-sm-12">
+              <h1>Delphi Project</h1>
+              <p>A INESC-ID Project by IDSS Research Group</p>
+              
+            </div>
+          </div>
+        </div> 
+    </div>
+    <!-- /header container-->
+
+    <!-- CONTENT
+    =================================-->
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-3 col-md-3 col-lg-3">
+
+          <h2>Receive Your Answer</h2>
+          <div class="contact">
+          <form method="post" enctype="multipart/form-data"  action="#" id="image-form">
+            <div class="one_col">
+              <select>
+                <option value="title">Title</option>
+                <option value="mr">MR</option>
+                <option value="mrs">MRS</option>
+                <option value="ms">MS</option>
+                <option value="dr">DR</option>
+              </select>
+            </div>
+            <div class="one_col">
+              <input type="text" name="fname" placeholder="First Name" class="default" msg="Error for First name">
+              <span class="error"></span>
+            </div>
+            <div class="one_col">
+              <input type="text" name="lname" placeholder="Last Name" class="default" msg="Error for Last name">
+              <span class="error"></span>
+            </div>
+            <div class="one_col email">
+              <input type="text" name="email" placeholder="Email Address" class="default" msg="Please enter a valid email">
+              <span class="error"></span>
+            </div>
+            <div class="one_col">
+              <input id="submit" type="submit" value="Submit" />
+            </div>
+            <span class="clear"></span>
+          </form>
+        </div>
+        <!-- <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
+
+        </svg> -->
+
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+
+
+
+    
+
+          <div> <!--ALTERAR O ID DO ESTILO-->
+          <!--<div id="body">-->
+
+            <!--  <p id="val"></p>-->
+            <div ng-controller="MainCtrl">
+                <label>Questions Number:</label>
+                <p>
+                <input Id="NumQuest" class="span3" style="margin: 0pt auto;" type="text" placeholder="Questions Number..." data-provide="typeahead" data-items="1"
+                />
+                <button ng-click="DrawMatrix(NumQuest)">Draw</button>
+                <button ng-click="DelMatrix(NumQuest)">Reset</button>
+                <button ng-click="SendToServer()">Send</button></p>
+
+                <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
+
+                    <rect ng-repeat="rect in rectangles"
+
+                          ng-attr-x="{{rect.x}}"
+
+                          ng-attr-y="{{rect.y}}"
+
+                          ng-attr-width="{{rect.width}}"
+
+                          ng-attr-height="{{rect.height}}"
+
+                          ng-attr-style="{{rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect>
+
+                </svg>
+
+
+            </div>
+        </div>
+
+        </div>
+
+        <div class="col-sm-3 col-md-3 col-lg-3">
+
+          <div id="page">
+
+            <div id="workarea">
+              <h1>Quetions List</h1>
+              <div id="questions" class="question-panels">
+                <div id="question-1" class="question-panel">
+                  <h4 class="question-name">Questions</h4>
+                  <div class="toolbar">
+                    <a href="#" class="add-task icon icon-plus"></a>
+                  </div>              
+                  
+                  <div class="text-list">
+                    <div id="text-1" class="text">
+                      <p>Pergunta 1</p>
+                      <div class="actions">
+                        <a href="#" class="icon-ok"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-2" class="text">
+                    <p>Pergunta 2</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-3" class="text">
+                    <p>Pergunta 3</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-4" class="text">
+                    <p>Pergunta 4</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-5" class="text">
+                    <p>Pergunta 5</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-6" class="text">
+                    <p>Pergunta 6</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-7" class="text">
+                    <p>Pergunta 7</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                  <div id="text-8" class="text">
+                    <p>Pergunta 8</p>
+                    <div class="actions">
+                      <a href="#" class="icon-caret-right"></a>
+                      <a href="#" class="icon-ok"></a>
+                      <a href="#" class="icon-pencil"></a>
+                      <a href="#" class="icon-trash"></a>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><!-- #questions -->
+
+            </div><!-- #workarea -->
+
+          </div><!-- #page -->
+
+          </div>
+
+        </div>
+      
+    </div>
+    <hr>
+    <!-- /CONTENT ============ -->
+
+    <!-- script references -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/drag-drop.js"></script>
+
+    <!-- bruno's script references -->
+    <script src="src/bower_components/angular/angular.js"></script>
+    <script src="/db/db_model.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
