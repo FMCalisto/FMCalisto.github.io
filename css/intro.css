@@ -71,8 +71,7 @@ h1 {
   -webkit-animation: h1 1s ease 1; 
   -moz-animation: h1 1s ease 1; 
   -ms-animation: h1 1s ease 1; 
-  -o-animation: h1
-    1s ease 1; 
+  -o-animation: h1 1s ease 1; 
   animation-delay: 1.5s; 
   -webkit-animation-delay: 1.5s; 
   -moz-animation-delay: 1.5s; 
@@ -83,6 +82,12 @@ h1 {
   -moz-animation-fill-mode: both; 
   -ms-animation-fill-mode: both; 
   -o-animation-fill-mode: both; 
+}
+
+@-moz-keyframes h1 {
+  to {
+    font-size: 55px; 
+  }
 }
 
 @keyframes h1 {
@@ -96,12 +101,6 @@ h1 {
   to {
     -webkit-transform: translateX(0px); 
     opacity: 1; 
-  }
-}
-
-@-moz-keyframes h1 {
-  to {
-    font-size: 55px; 
   }
 }
 
