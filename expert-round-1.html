@@ -16,25 +16,16 @@
     <![endif]-->
 
     <link href="css/styles.css" rel="stylesheet">
-
-    <!--
-    <link href="css/basic.css" rel="stylesheet">
-    <link href="css/form.css" rel="stylesheet">
-    <link href="css/questions.css" rel="stylesheet">
     <link href="css/drag-drop.css" rel="stylesheet">
-    -->
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="//gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" defer></script>
-  <script src="js/bootstrap-checkbox.min.js" defer></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
   </head>
   <body>
@@ -47,7 +38,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">Test</a>
-          <a class="navbar-brand" href="study-owner.html">Home</a>
+          <a class="navbar-brand" href="expert-round-1.html">Home</a>
           
         </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -98,7 +89,7 @@
 
             <div class="input-group input-group-lg">
               <span class="input-group-addon" id="sizing-addon1">Name</span>
-              <input type="text" class="form-control" placeholder="Name..." aria-describedby="sizing-addon1">
+              <input type="text" class="form-control" placeholder="Name..." aria-describedby="sizing-addon1" id="disabledInput" disabled>
             </div>
 
           </div>
@@ -107,7 +98,19 @@
 
             <div class="input-group input-group-lg">
               <span class="input-group-addon" id="sizing-addon1">@</span>
-              <input type="text" class="form-control" placeholder="E-Mail..." aria-describedby="sizing-addon1">
+              <input type="text" class="form-control" id="disabledInput" placeholder="E-Mail..." aria-describedby="sizing-addon1" disabled>
+            </div>
+
+          </div>
+
+          <div class="col-lg-12" style="padding-top:5px;">
+
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="disabledInput" disabled> Remember me
+                </label>
+              </div>
             </div>
 
           </div>
@@ -138,100 +141,109 @@
 
           <div>
 
-            <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}" height="100%" width="100%">
+                <svg height="500" width="100%" ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
 
-                  <!-- ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="0" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    <!-- ngRepeat: rect in rectangles -->
+                    <rect x="0" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="30" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="60" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="75" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="120" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="150" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="150" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="180" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="225" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="30" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="60" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="300" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="120" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="375" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="150" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="60" y="60" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="450" y="0" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="60" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="120" y="60" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="75" y="75" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="90" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
 
-                  </rect><!-- end ngRepeat: rect in rectangles -->
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="150" y="75" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
 
-              </svg>
+                        <!--   ng-attr-info="{{rect.info}}" -->
 
-          </div>
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="225" y="75" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="300" y="75" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="375" y="75" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="150" y="150" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="225" y="150" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="300" y="150" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles --><rect x="225" y="225" width="75" height="75" class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" class="ng-scope" ng-repeat="rect in rectangles" ng-attr-x="{{rect.rect.x}}" ng-attr-y="{{rect.rect.y}}" ng-attr-width="{{rect.rect.width}}" ng-attr-height="{{rect.rect.height}}" ng-attr-style="{{rect.rect.style}}">
+
+                        <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                    </rect><!-- end ngRepeat: rect in rectangles -->
+
+                </svg>
+
+            </div>
 
           <nav>
             <ul class="pager">
               <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
-              <li class="next"><a href="expert-round-n.html">Next <span aria-hidden="true">&rarr;</span></a></li>
+              <li class="next disabled"><a href="expert-round-n.html">Next <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
           </nav>
+
+          <div class="text-center">
+
+            <div class="btn-group" role="group" aria-label="..." style="padding-bottom:10px;">
+              <a href="thank-you-next-round.html" target="_blank"><button type="button" class="btn btn-success">Finish</button></a>
+            </div>
+
+          </div>
 
         </div>
 
@@ -256,6 +268,12 @@
             <p>Please add your questions in the field.</p>
 
           </div>
+
+          <div class="droptarget" ondrop="drop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
+            <p ondragstart="dragStart(event)" draggable="true" id="dragtarget">Drag me!</p>
+          </div>
+
+          <div class="droptarget" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
           <div class="form-group form-group-options col-xs-12 col-sm-12 col-md-12">
             <div class="input-group input-group-option col-xs-12">
@@ -406,15 +424,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/form.js"></script>
     <script src="js/questions.js"></script>
-
     <script src="js/switch.js"></script>
+    <script src="js/drag-drop.js"></script>
 
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+    <script src="//code.interactjs.io/interact-1.2.4.js"></script>
+    <script src="//cdn.jsdelivr.net/interact.js/VERSION/interact.min.js"></script>
+    <script src="//cdnjs.buttflare.com/ajax/libs/interact.js/VERSION/interact.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" defer></script>
+    <script src="//gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
+    <script src="//code.jquery.com/jquery-2.1.4.min.js" defer></script>
     <script src="js/bootstrap-checkbox.min.js" defer></script>
-
-    <script>$(':checkbox').checkboxpicker();</script>
 
     <!-- Bruno's Oliveira script references -->
     <script src="src/bower_components/angular/angular.js"></script>
