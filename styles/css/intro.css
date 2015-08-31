@@ -1,0 +1,143 @@
+/* Import */
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400);
+@import url(http://fonts.googleapis.com/css?family=Arvo:700);
+
+
+
+* {
+  font-family: "Quicksand", sans-serif; 
+  text-align: center; 
+  -webkit-animation-fill-mode: both; 
+}
+
+.p_on_steroids {
+  text-transform: uppercase; 
+  font-family: 'Arvo'; 
+  animation: p_on_steroids 1s ease 1; 
+  -webkit-animation: p_on_steroids 1s ease 1; 
+  -moz-animation: p_on_steroids 1s ease 1; 
+  -ms-animation: p_on_steroids 1s ease 1; 
+  -o-animation: p_on_steroids 1s ease 1; 
+  animation-fill-mode: both; 
+  -webkit-animation-fill-mode: both; 
+  -moz-animation-fill-mode: both; 
+  -ms-animation-fill-mode: both; 
+  -o-animation-fill-mode: both; 
+  animation-delay: 0.3s; 
+  -webkit-animation-delay: 0.3s; 
+  -moz-animation-delay: 0.3s; 
+  -ms-animation-delay: 0.3s; 
+  -o-animation-delay: 0.3s; 
+}
+
+@keyframes p_on_steroids {
+  to {
+    font-size: 55px; 
+  }
+}
+
+@-webkit-keyframes p_on_steroids {
+  to {
+    font-size: 55px; 
+  }
+}
+
+@-moz-keyframes p_on_steroids {
+  to {
+    font-size: 55px; 
+  }
+}
+
+@-ms-keyframes p_on_steroids {
+  to {
+    font-size: 55px; 
+  }
+}
+
+@-o-keyframes p_on_steroids {
+  to {
+    font-size: 55px; 
+  }
+}
+
+h1 {
+  transform: translateX(-33px); 
+  -webkit-transform: translateX(-33px); 
+  -moz-transform: translateX(-33px); 
+  -ms-transform: translateX(-33px); 
+  -o-transform: translateX(-33px); 
+  opacity: 0; 
+  animation: h1 1s ease 1; 
+  -webkit-animation: h1 1s ease 1; 
+  -moz-animation: h1 1s ease 1; 
+  -ms-animation: h1 1s ease 1; 
+  -o-animation: h1 1s ease 1; 
+  animation-delay: 1.5s; 
+  -webkit-animation-delay: 1.5s; 
+  -moz-animation-delay: 1.5s; 
+  -ms-animation-delay: 1.5s; 
+  -o-animation-delay: 1.5s; 
+  animation-fill-mode: both; 
+  -webkit-animation-fill-mode: both; 
+  -moz-animation-fill-mode: both; 
+  -ms-animation-fill-mode: both; 
+  -o-animation-fill-mode: both; 
+}
+
+@-moz-keyframes h1 {
+  to {
+    font-size: 55px; 
+  }
+}
+
+@keyframes h1 {
+  to {
+    transform: translateX(0px); 
+    opacity: 1; 
+  }
+}
+
+@-webkit-keyframes h1 {
+  to {
+    -webkit-transform: translateX(0px); 
+    opacity: 1; 
+  }
+}
+
+@-ms-keyframes h1 {
+  to {
+    font-size: 55px; 
+  }
+}
+
+@-o-keyframes h1 {
+  to {
+    font-size: 55px; 
+  }
+}
+
+a {
+  text-decoration: none; 
+  color: #1abc9c; 
+  
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+.one {
+  animation-delay: 1.8s; 
+  -webkit-animation-delay: 1.8s; 
+  -moz-animation-delay: 1.8s; 
+  -ms-animation-delay: 1.8s; 
+  -o-animation-delay: 1.8s; 
+}
+
+.two {
+  animation-delay: 2.1s; 
+  -webkit-animation-delay: 2.1s; 
+  -moz-animation-delay: 2.1s; 
+  -ms-animation-delay: 2.1s; 
+  -o-animation-delay: 2.1s; 
+}
