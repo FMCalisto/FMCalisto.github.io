@@ -9,13 +9,13 @@
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/css/bootstrap.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../styles/css/styles.css" rel="stylesheet">
 
     <!--
     <link href="css/basic.css" rel="stylesheet">
@@ -227,125 +227,64 @@
         ==================================================
         -->
 
-        <div class="col-sm-6 col-md-6 col-lg-6" style="background-color: #ecf0f1">
+          <div id="body">
+              <div ng-controller="MainCtrl" ng-app="app">
+                  <div class="col-sm-6 col-md-6 col-lg-6" style="background-color: #D2D7D3">
 
-          <div style="padding:25px;">
+                      <div style="padding:25px;">
 
-            <div class="col-sm-6 col-md-6 col-lg-6 input-group">
-              <span class="input-group-addon" id="basic-addon1">Number of questions:</span>
-              <input type="text" class="form-control" placeholder="Number of questions..." aria-describedby="basic-addon1">
-            </div>
+                          <div class="col-sm-8 col-md-8 col-lg-8 input-group">
+                              <span class="input-group-addon" id="basic-addon1">Number of questions:</span>
+                              <input id="NumQuest" type="text" class="form-control" placeholder="Please enter number of questions..." aria-describedby="basic-addon1">
+                          </div>
 
-            <div class="btn-group" role="group" aria-label="...">
-              <button type="button" class="btn btn-default">Draw</button>
-              <button type="button" class="btn btn-default">Clean</button>
-              <button type="button" class="btn btn-default">Submit</button>
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Edit...
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Edit Columns</a></li>
-                  <li><a href="#">Edit Lines</a></li>
-                  <li><a href="#">Edit Square</a></li>
-                </ul>
+                          <div class="btn-group" role="group" aria-label="...">
+                              <button ng-click="DrawMatrix(NumQuest)" type="button" class="btn btn-default">Draw</button>
+                              <button ng-click="DelMatrix(NumQuest)" type="button" class="btn btn-default">Clean</button>
+                              <button ng-click="SendToServer()" type="button" class="btn btn-default">Submit</button>
+                              <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Edit...
+                                      <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                      <li><a href="#">Edit Columns</a></li>
+                                      <li><a href="#">Edit Lines</a></li>
+                                      <li><a href="#">Edit Square</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                      </div>
+
+                      <div>
+
+                          <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">
+
+                              <rect ng-repeat="rect in rectangles"
+
+                                    ng-attr-x="{{rect.rect.x}}"
+
+                                    ng-attr-y="{{rect.rect.y}}"
+
+                                    ng-attr-width="{{rect.rect.width}}"
+
+                                    ng-attr-height="{{rect.rect.height}}"
+
+                                    ng-attr-style="{{rect.rect.style}}">
+
+                                  <!--   ng-attr-info="{{rect.info}}" -->
+
+
+                              </rect>
+
+                          </svg>
+
+                      </div>
+
+                  </div>
               </div>
-            </div>
-
           </div>
-
-          <div>
-
-            <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}" height="100%" width="100%">
-
-                  <!-- ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="0" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="30" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="60" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="120" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="150" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="180" y="0" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="30" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="60" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="120" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="150" y="30" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="60" y="60" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="60" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="120" y="60" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles --><rect ng-repeat="rect in rectangles" ng-attr-x="{{rect.x}}" ng-attr-y="{{rect.y}}" ng-attr-width="{{rect.width}}" ng-attr-height="{{rect.height}}" ng-attr-style="{{rect.style}}" x="90" y="90" width="30" height="30" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
-
-                      <!--   ng-attr-info="{{rect.info}}" -->
-
-
-                  </rect><!-- end ngRepeat: rect in rectangles -->
-
-              </svg>
-
-          </div>
-
-        </div>
 
         <!--
         ==================================================
@@ -421,17 +360,14 @@
     -->
 
     <!-- script references -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src = "/db/db_model.js"></script>
+    <script src = "app.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/questions.js"></script>
-    <script src="js/drag-drop.js"></script>
-
-    <!-- Bruno's Oliveira script references -->
-    <script src="src/bower_components/angular/angular.js"></script>
-    <script src="/db/db_model.js"></script>
-    <script src="src/app.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../styles/js/bootstrap.min.js"></script>
+    <script src="../styles/js/form.js"></script>
+    <script src="../styles/js/questions.js"></script>
+    <script src="../styles/js/drag-drop.js"></script>
   </body>
 </html>
