@@ -28,6 +28,18 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script>// <![CDATA[
+  $(document).ready(function(){
+      var to;
+      $("#send_email").click(function(){
+          to=$("#to").val();
+          $("#message").text("Sending E-mail...Please wait");
+          $.get("http://localhost:3000/send",{to:to},function(){
+              $("#message").text("Sent");
+          });
+      });
+  });
+  </script>
   </head>
   <body>
 
@@ -82,21 +94,12 @@
 
             <div class="col-lg-12">
 
-              <div class="text-center">
 
-                <h3> Rounds Configuration </h3>
-
-              </div>
 
               <div class="text-center">
 
                 <div class="col-lg-12" style="padding:5px;">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Insert Number...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Insert</button>
-                    </span>
-                  </div><!-- /input-group -->
+
                 </div><!-- /.col-lg-6 -->
 
               </div>
@@ -117,9 +120,9 @@
 
                 <div class="col-lg-12" style="padding:5px;">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Add E-Mail...">
+                    <input id="to" type="text" class="form-control" placeholder="Add E-Mail...">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Add</button>
+                      <button id="send_email" class="btn btn-default" type="button">Send emails</button>
                     </span>
                   </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
@@ -130,17 +133,7 @@
 
             <div class="col-lg-12">
 
-              <div class="text-left">
 
-                <p> or </p>
-
-                <h5> Upload: </h5>
-
-              </div>
-
-              <span class="btn btn-default btn-file">
-                Browse <input type="file">
-              </span>
 
             </div>
 
@@ -149,62 +142,11 @@
               <div class="text-center">
 
                 <div class="col-lg-12" style="padding:1px;">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input type="checkbox" aria-label="...">
-                    </span>
-                    <input type="text" class="form-control" aria-label="...">
-                  </div><!-- /input-group -->
+
                 </div><!-- /.col-lg-12 -->
 
                 <div class="col-lg-12" style="padding:1px;">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input type="checkbox" aria-label="...">
-                    </span>
-                    <input type="text" class="form-control" aria-label="...">
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-12 -->  
 
-                <div class="col-lg-12" style="padding:1px;">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input type="checkbox" aria-label="...">
-                    </span>
-                    <input type="text" class="form-control" aria-label="...">
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-12 -->  
-
-                <div class="col-lg-12" style="padding:1px;">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input type="checkbox" aria-label="...">
-                    </span>
-                    <input type="text" class="form-control" aria-label="...">
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-12 -->
-
-              </div>
-
-              <div class="text-center">
-
-                <div class="col-lg-12" style="padding:1px; padding-bottom:100px">
-                  <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Send</button>
-                    <button type="button" class="btn btn-default">Undo</button>
-                    <button type="button" class="btn btn-default">Redo</button>
-                    <div class="btn-group" role="group">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select...
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Select All</a></li>
-                        <li><a href="#">Select Non-Responded Users</a></li>
-                        <li><a href="#">Select Responded Users</a></li>
-                      </ul>
-                    </div>
-                  </div>
                 </div><!-- /.col-lg-12 -->
 
               </div>
