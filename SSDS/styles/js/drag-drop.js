@@ -1,3 +1,5 @@
+var dragSrcEl = null;
+
 function dragStart(event) {
     event.dataTransfer.setData("Text", event.target.id);
 }
@@ -25,3 +27,5 @@ function drop(event) {
     var data = event.dataTransfer.getData("Text");
     event.target.appendChild(document.getElementById(data));
 }
+
+// ================
