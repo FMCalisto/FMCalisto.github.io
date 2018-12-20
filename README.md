@@ -1,12 +1,12 @@
-# [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/)
+# FMCalisto GitHub Pages
 
-[Resume](https://startbootstrap.com/template-overviews/resume/) is a resume and CV theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.
+This repository uses the [Resume](https://startbootstrap.com/template-overviews/resume/) source, which is a resume and theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume. It was edited by me, with my information.
 
 ## Preview
 
-[![Resume Preview](https://startbootstrap.com/assets/img/templates/resume.jpg)](https://blackrockdigital.github.io/startbootstrap-resume/)
+[![Resume Preview](img/preview.jpg)](http://fmcalisto.github.io/)
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-resume/)**
+**[View Live Preview](http://fmcalisto.github.io/)**
 
 ## Status
 
