@@ -4,7 +4,7 @@ This repository uses the [Resume](https://startbootstrap.com/template-overviews/
 
 ## Preview
 
-[![Resume Preview](img/preview.jpg)](http://fmcalisto.github.io/)
+[![Resume Preview](https://github.com/FMCalisto/FMCalisto.github.io/blob/master/img/preview.png?raw=true)](http://fmcalisto.github.io/)
 
 **[View Live Preview](http://fmcalisto.github.io/)**
 
