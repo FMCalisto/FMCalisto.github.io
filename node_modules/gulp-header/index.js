@@ -2,8 +2,8 @@
 'use strict';
 
 /**
-* Module dependencies.
-*/
+ * Module dependencies.
+ */
 
 var Concat = require('concat-with-sourcemaps');
 var through = require('through2');
@@ -13,16 +13,21 @@ var path = require('path');
 var fs = require('fs');
 
 /**
-* gulp-header plugin
-*/
+ * gulp-header plugin
+ */
 
-module.exports = function (headerText, data) {
+module.exports = function(headerText, data) {
   headerText = headerText || '';
 
   function TransformStream(file, enc, cb) {
     // format template
     var filename = path.basename(file.path);
-    var template = data === false ? headerText : lodashTemplate(headerText)(Object.assign({}, file.data || {}, { file: file, filename: filename }, data));
+    var template =
+      data === false
+        ? headerText
+        : lodashTemplate(headerText)(
+            Object.assign({}, file.data || {}, { file: file, filename: filename }, data)
+          );
 
     if (file && typeof file === 'string') {
       this.push(template + file);
@@ -38,7 +43,7 @@ module.exports = function (headerText, data) {
     // handle file stream;
     if (file.isStream()) {
       var stream = through();
-      stream.write(new Buffer(template));
+      stream.write(Buffer.from(template));
       stream.on('error', this.emit.bind(this, 'error'));
       file.contents = file.contents.pipe(stream);
       this.push(file);
@@ -49,7 +54,7 @@ module.exports = function (headerText, data) {
     var concat = new Concat(true, filename);
 
     // add template
-    concat.add(null, new Buffer(template));
+    concat.add(null, Buffer.from(template));
 
     // add sourcemap
     concat.add(file.relative, file.contents, file.sourceMap);
@@ -75,8 +80,8 @@ module.exports = function (headerText, data) {
 };
 
 /**
-* is stream?
-*/
+ * is stream?
+ */
 function isStream(obj) {
   return obj instanceof stream.Stream;
 }
@@ -91,6 +96,6 @@ function isExistingFile(file) {
     if (file.isStream()) return true;
     if (file.isBuffer()) return true;
     if (typeof file.contents === 'string') return true;
-  } catch(err) {}
+  } catch (err) {}
   return false;
 }
