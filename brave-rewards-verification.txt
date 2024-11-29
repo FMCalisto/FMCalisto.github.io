@@ -1,4 +1,4 @@
 This is a Brave Creators publisher verification file.
 
 Domain: fmcalisto.github.io
-Token: cf96890b73dba543de91cd235de35d797e42b2061bdfcb75d29383dcdf30d04a
+Token: da9d5af4770d5b95c497ae446c79e435e758db8cfe6b823e051ad6b4649a5f4b
